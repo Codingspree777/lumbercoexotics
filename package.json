@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "test": "jest --verbose",
+    "test2": "jest --verbose",
     "start": "nodemon server/bin/www.js",
     "dev-client": "webpack-dev-server",
     "build": "webpack"
