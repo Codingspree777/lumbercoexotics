@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --verbose",
     "start": "nodemon server/bin/www.js",
     "dev-client": "webpack-dev-server",
     "build": "webpack"
@@ -29,7 +30,6 @@
     "cookie-parser": "^1.4.4",
     "css-loader": "^2.1.1",
     "express": "^4.16.4",
-    "path": "^0.12.7",
     "pg": "^7.10.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -38,8 +38,11 @@
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
+<<<<<<< HEAD
     "save": "^2.3.3",
     "socket.io": "^2.2.0",
+=======
+>>>>>>> b4dff76e5cff358a623c3c488ccc0577fb0724f1
     "style-loader": "^0.23.1",
     "svg.js": "^2.7.1",
     "victory": "^32.2.0",

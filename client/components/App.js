@@ -2,14 +2,12 @@ import React from 'react';
 import { Link, BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Header from './header';
 import Home from './home';
-import Chat from './Chat';
 import WoodContainer from '../containers/woodContainer';
 import StainContainer from '../containers/stainContainer';
 import Success from './success';
 import Cart from '../containers/cart';
 import AnalyticsContainer from '../containers/analyticsContainer';
 import './styles.css'
-
 
 
 
