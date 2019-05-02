@@ -6,4 +6,4 @@ export const SELECT_STAIN = "SELECT_STAIN";
 export const SUBMIT_ORDER = "SUBMIT_ORDER";
 export const ADD_SOCKET = "ADD_SOCKET";
 export const GET_DATA = "GET_DATA";
-export const GET_DATA = "GET_DATA";
+
