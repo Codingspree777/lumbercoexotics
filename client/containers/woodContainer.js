@@ -56,7 +56,7 @@ class WoodContainer extends Component {
     ));
 
     return (
-      <div>
+      <div className="productContainer">
         <h1>Select your hardwood type:</h1>
         { woodBoxes }
         <div className="buttonDiv">

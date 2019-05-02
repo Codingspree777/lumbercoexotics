@@ -8,7 +8,7 @@ const ProductDisplay = props => {
     }
   } else {
     style = {
-      backgroundColor: 'lightGrey'
+      backgroundColor: '#E6E6E6'
     }
   }
   const handleClick = e => {

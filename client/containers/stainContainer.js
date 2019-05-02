@@ -55,7 +55,7 @@ class StainContainer extends Component {
     ));
 
     return (
-      <div>
+      <div className="productContainer">
         <h1>Select your stain</h1>
         {stainBoxes}
         <div className="buttonDiv">

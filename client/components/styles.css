@@ -53,7 +53,7 @@
     padding: 20px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -120%);
+    transform: translate(-50%, -140%);
 }
 
 #woodLink {
@@ -73,8 +73,10 @@ a:hover {
 }
 
 .header {
+    display: block;
     position: absolute;
-    transform: translate(90%, -150%);
+    transform: translate(95%, -90%);
+    margin: 0 auto;
     text-align: center;
 }
 
@@ -89,12 +91,15 @@ a:hover {
 .productList {
    list-style: none; 
    font-size: 20px;
+   font-weight: bold;
 }
 
 .productListLast {
     list-style: none;
     padding-bottom: 20px;
     font-size: 20px;
+    font-weight: bold;
+
  }
 
 .buttonDiv {
@@ -115,4 +120,8 @@ img {
     width: 100%;
     text-align: center;
     margin-top: 100px
+}
+
+.productContainer {
+    text-align: center;
 }
