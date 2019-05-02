@@ -4,8 +4,7 @@
   "description": "A store to custom configure your wrist rest",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "test2": "jest --verbose",
+    "test": "jest --verbose",
     "start": "nodemon server/bin/www.js",
     "dev-client": "webpack-dev-server",
     "build": "webpack"
@@ -30,6 +29,7 @@
     "cookie-parser": "^1.4.4",
     "css-loader": "^2.1.1",
     "express": "^4.16.4",
+    "jest": "^24.7.1",
     "pg": "^7.10.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -42,6 +42,7 @@
     "socket.io": "^2.2.0",
     "socketio": "^1.0.0",
     "style-loader": "^0.23.1",
+    "supertest": "^4.0.2",
     "svg.js": "^2.7.1",
     "victory": "^32.2.0",
     "webpack": "^4.30.0"
