@@ -80,12 +80,15 @@ class AnalyticsContainer extends Component {
       if (totals[element.stain] === undefined) totals[element.stain] = 1;
       else totals[element.stain]++;
 
-      let combo = element.wood+ '/' +element.stain;
-      if (totals[combo] === undefined) totals[combo] = 1;
-      else totals[combo]++;
+      let combos = element.wood+ '/' +element.stain;
+      if (totals.combo[combos] === undefined) totals.combo[combos] = 1;
+      else totals.combo[combos]++;
     })
 
-    console.log(this.props.customerData)
+    // let entries = Object.entries(totals.combo)
+    // console.log(`this is entries ${entries}`);
+
+    // console.log(this.props.customerData)
     console.log(totals);
 
     return (
@@ -151,7 +154,7 @@ class AnalyticsContainer extends Component {
                     {x: "Bur", y: totals["Burgundy"]}, {x: "C-B", y: totals["Cherry-Blossom"]}, {x: "HD", y: totals["Honeydew"]}, {x: "IW", y: totals["Island-Water"]}, {x: "PW", y: totals["Pure-white"]}, {x: "Sl", y: totals["Slate"]}
                   ]}
                   labels={["Burgundy", "Cherry-Blossom", "Honeydew", "Island-Water", "Pure-White", "Slate"]}
-                  labelComponent={<VictoryLabel y={280} angle={90} verticalAnchor="middle" textAnchor="beginning"/>}
+                  labelComponent={<VictoryLabel y={280} angle={90} verticalAnchor="middle" textAnchor="start"/>}
                 />
               </g>
               <g transform={"translate(100, -50)"}>
@@ -207,7 +210,7 @@ class AnalyticsContainer extends Component {
                           return { text: totals["maple"] }
                         } else if (props.text === "Pine") {
                           return { text: totals["pine"] }
-                        } else if (props.text === "Red-Oak") {
+                        }else if (props.text === "Red-Oak") {
                           return { text: totals["redoak"] }
                         }
                       }
@@ -229,7 +232,7 @@ class AnalyticsContainer extends Component {
                     {x: "Ash", y: totals["ash"]}, {x: "Birch", y: totals["birch"]}, {x: "Cherry", y: totals["cherry"]}, {x: "Maple", y: totals["maple"]}, {x: "Pine", y: totals["pine"]}, {x: "Red-Oak", y: totals["redoak"]}
                   ]}
                   labels={["Ash", "Birch", "Cherry", "Maple", "Pine", "Red-Oak"]}
-                  labelComponent={<VictoryLabel y={280} angle={90} verticalAnchor="middle" textAnchor="beginning"/>}
+                  labelComponent={<VictoryLabel y={280} angle={90} verticalAnchor="middle" textAnchor="start"/>}
                 />
               </g>
               <g transform={"translate(100, -50)"}>
@@ -244,6 +247,52 @@ class AnalyticsContainer extends Component {
               </g>
             </VictorySharedEvents>
           </svg>
+        </div>
+        <div className="combinedChart"> Combinations
+          <VictoryBar polar
+            data={[
+              { x: 10, y: totals.combo["ash/Burgundy"]},
+              { x: 20, y: totals.combo["ash/Cherry-Blossom"]},
+              { x: 30, y: totals.combo["ash/Honeydew"]},
+              { x: 40, y: totals.combo["ash/Island-Water"]},
+              { x: 50, y: totals.combo["ash/Pure-white"]},
+              { x: 60, y: totals.combo["ash/Slate"]},
+              { x: 70, y: totals.combo["birch/Burgundy"] },
+              { x: 80, y: totals.combo["birch/Cherry-Blossom"] },
+              { x: 90, y: totals.combo["birch/Honeydew"] },
+              { x: 100, y: totals.combo["birch/Island-Water"] },
+              { x: 110, y: totals.combo["birch/Pure-white"]},
+              { x: 120, y: totals.combo["birch/Slate"]},
+              { x: 130, y: totals.combo["cherry/Burgundy"]},
+              { x: 140, y: totals.combo["cherry/Cherry-Blossom"]},
+              { x: 150, y: totals.combo["cherry/Honeydew"] },
+              { x: 160, y: totals.combo["cherry/Island-Water"] },
+              { x: 170, y: totals.combo["cherry/Pure-white"] },
+              { x: 180, y: totals.combo["cherry/Slate"] },
+              { x: 190, y: totals.combo["maple/Burgundy"] },
+              { x: 200, y: totals.combo["maple/Cherry-Blossom"] },
+              { x: 210, y: totals.combo["maple/Honeydew"] },
+              { x: 220, y: totals.combo["maple/Island-Water"] },
+              { x: 230, y: totals.combo["maple/Pure-white"] },
+              { x: 240, y: totals.combo["maple/Slate"] },
+              { x: 250, y: totals.combo["pine/Burgundy"] },
+              { x: 260, y: totals.combo["pine/Cherry-Blossom"] },
+              { x: 270, y: totals.combo["pine/Honeydew"] },
+              { x: 280, y: totals.combo["pine/Island-Water"] },
+              { x: 290, y: totals.combo["pine/Pure-white"] },
+              { x: 300, y: totals.combo["pine/Slate"] },
+              { x: 310, y: totals.combo["redoak/Burgundy"] },
+              { x: 320, y: totals.combo["redoak/Cherry-Blossom"] },
+              { x: 330, y: totals.combo["redoak/Honeydew"] },
+              { x: 340, y: totals.combo["redoak/Island-Water"] },
+              { x: 350, y: totals.combo["redoak/Pure-white"] },
+              { x: 360, y: totals.combo["redoak/Slate"] }
+            ]}
+            labels={(d) => d.x}
+            width={300} height={300}
+            domain={{ y: [0, 20] }}
+            style={{ data: { fill: "#c43a31", stroke: "black", strokeWidth: 2 } }}
+          />
         </div>
       </div>
     ) 

@@ -40,6 +40,7 @@
     "redux-thunk": "^2.3.0",
     "save": "^2.3.3",
     "socket.io": "^2.2.0",
+    "socketio": "^1.0.0",
     "style-loader": "^0.23.1",
     "svg.js": "^2.7.1",
     "victory": "^32.2.0",
