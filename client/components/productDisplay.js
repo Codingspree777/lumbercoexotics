@@ -8,21 +8,20 @@ const ProductDisplay = props => {
     }
   } else {
     style = {
-      backgroundColor: 'yellow'
+      backgroundColor: 'lightGrey'
     }
   }
   const handleClick = e => {
     props.selectItemClickHandler(e);
   };
   return (
-    <div onClick={handleClick} style={style} id={props.type}>
+    <div className="products" onClick={handleClick} style={style} id={props.type}>
       <img src={props.image}></img>
       <ul>
-        <li> {props.type} </li>
-        <li> {props.image} </li>
-        <li> {props.description} </li>
-        <li> {props.price} </li>
-        <li> {props.inStock === true ? 'Available' : 'Out of Stock'} </li>
+        <li className="productList"> {props.type} </li>
+        <li className="productList"> {props.description} </li>
+        <li className="productList"> {props.price} </li>
+        <li className="productListLast"> {props.inStock === true ? 'Available' : 'Out of Stock'} </li>
       </ul>
     </div>
   );

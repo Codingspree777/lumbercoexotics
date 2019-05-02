@@ -24,7 +24,7 @@ class Cart extends Component {
 
   render() {
     return (
-      <div>
+      <div id="cartBox">
         <div>
           <h2>Your order</h2>
           <div>Type of wood: { this.props.selectedWood.type }</div>

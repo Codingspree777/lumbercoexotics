@@ -59,7 +59,9 @@ class WoodContainer extends Component {
       <div>
         <h1>Select your hardwood type:</h1>
         { woodBoxes }
-        <button onClick={this.goToStainSelection}>Next step: Select your stain</button>
+        <div className="buttonDiv">
+          <button className="button" onClick={this.goToStainSelection}>Next step: Select your stain</button>
+        </div>
       </div>
     );
   }
