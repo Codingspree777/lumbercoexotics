@@ -13,6 +13,8 @@ class UserUpdateForm extends React.Component {
         department: props.user.department,
         access: props.user.access,
       };
+      this.handelChange = this.handelChange.bind(this);
+      this.handleSubmit = this.handleSubmit.bind(this);
     }
     handelChange(e) {
       this.setState({ [e.target.name]: e.target.value });

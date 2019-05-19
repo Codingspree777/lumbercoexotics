@@ -29,6 +29,7 @@ class App extends React.Component{
     this.state = {
       userId: null,
     };
+    this.handelEditCard = this.handelEditCard.bind(this);
   }
 
 

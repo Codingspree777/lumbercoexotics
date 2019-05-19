@@ -11,13 +11,17 @@ class UserForm extends React.Component {
       department: '',
       access: '',
     };
+    this.handelChange = this.handelChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
   //onchange to get varibales from form
-  handelChange(e){
+  handelChange(e) {
+    console.log(this.state.props);
     this.setState({ [e.target.name]: e.target.value });
   };
 
   handleSubmit(e){
+ 
     e.preventDefault();
     this.props.handleSubmit({ variables: { ...this.state } });
   };
